@@ -20,7 +20,7 @@ const UserOnboard = ({ values, status, errors, touched }) => {
         <div className='user-input'>
           <div className='form-entry'>
             <Field type="text" name="name" placeholder="Name" />
-            {touched.name && errors.name && <p className="error-msg">{errors.name}</p>}
+            {touched.name && errors.name && (<p className="error-msg">{errors.name}</p>)}
           </div>
           <div className='form-entry'>
             <Field type="text" name="email" placeholder="Email" />
@@ -33,8 +33,8 @@ const UserOnboard = ({ values, status, errors, touched }) => {
           <div className='form-entry'>
             <label>
               <Field type="checkbox" name="terms" checked={values.terms} />
-              {touched.terms && errors.terms && <p className="error-msg">{errors.terms}</p>}
-              Sure, I read them ... NOT!
+              {touched.terms && errors.terms && (<p className="error-msg">{errors.terms}</p>)}
+              Terms of Service - Sure, I read them ... NOT!
             </label>
           </div>
           <button type="submit">Submit</button>
